@@ -6,6 +6,7 @@ declare module "react-native-ble-peripheral" {
     permissions: number,
     properties: number
   ): void;
+  function clearServices(): void;
   function sendNotificationToDevices(
     ServiceUUID: string,
     CharacteristicUUID: string,
