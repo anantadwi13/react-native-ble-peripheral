@@ -80,6 +80,11 @@ public class RNBLEModule extends ReactContextBaseJavaModule{
     }
 
     @ReactMethod
+    public void clearServices() {
+        this.servicesMap.clear();
+    }
+
+    @ReactMethod
     public void addCharacteristicToService(String serviceUUID, String uuid, Integer permissions, Integer properties) {
         UUID CHAR_UUID = UUID.fromString(uuid);
         BluetoothGattCharacteristic tempChar = new BluetoothGattCharacteristic(CHAR_UUID, properties, permissions);
